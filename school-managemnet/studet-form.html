@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student | Form</title>
+    <link rel="stylesheet" href="school-magament.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="school-name">
+            <h2>SHABA PRIMARY & SECONDARY SCHOOL</h2>
+        </div>
+        <div class="user-profile">
+          <a href="log-in.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="home-page.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="studet-form.html"><i class="fas fa-user-graduate"></i> Student File</a></li>
+                <li><a href="teacher-form.html"><i class="fas fa-chalkboard-teacher"></i> Teacher File</a></li>
+                <li><a href="manager-foem.html"><i class="fas fa-user-shield"></i> School Manager</a></li>
+                <li><a href="Finance-form.html"><i class="fas fa-money-bill-wave"></i> Lacagta (Finance)</a></li>
+                <li><a href="attendence.html"><i class="fas fa-money-bill-wave"></i> Attendance</a></li>
+                <li><a href="subjec-file.html"><i class="fas fa-book"></i> Subjects</a></li>
+                <li><a href="exam -file.html"><i class="fas fa-poll"></i> Imtixaanka (Exams)</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <section class="registration-form">
+                <h3><i class="fas fa-user-plus"></i> Diiwaangelinta Arday Cusub</h3>
+                <form id="studentForm">
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label>Magaca Oo Buuxa</label>
+                            <input type="text" id="fullname" placeholder="Tusaale: Cabdullahi Adan shaba'">
+                        </div>
+                        <div class="form-group">
+                            <label>Fasalka & Class</label>
+                            <select id="class">
+                                <option>Form 4</option>
+                                <option>Form 3</option>
+                                <option>Form 2</option>
+                                <option>Form 1</option>
+                                <option>class 8</option>
+                                <option>class 7</option>
+                                <option>class 6</option>
+                                <option>class 5</option>
+                                <option>class 4</option>
+                                <option>class 3</option>
+                                <option>class 2</option>
+                                <option>class 1</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label>Taleefanka</label>
+                            <input type="text" id="contact" placeholder="number ka ardayga (061.. ama 077..)">
+                        </div>
+                        <div class="form-group">
+                            <label>Taariikhda Dhalashada</label>
+                            <input type="text" id="age" placeholder=" da'da 1....120">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cinwaanka Guriga ardayda & Address</label>
+                        <textarea id="address" rows="3" placeholder="Degmada ama Xaafadda..."></textarea>
+                    </div>
+
+                    <button type="submit" class="save-btn" onclick="taabo()">Save Student Data</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+
+    <script>
+        function taabo() {
+            let phone = document.getElementById("contact").value;
+
+            if (phone.startsWith("061")) {
+                // alert("Numberka waa saxanyahay waana Hormuud");
+            } else if (phone.startsWith("077")) {
+                // alert("Numberka waa saxanyahay waana Hormuud");
+            }
+            else {
+                alert("Numberka waa khaldan yahay, geli number Hormuud ah (061...ama 077...)");
+            }
+
+
+             let age = Number(document.getElementById("age").value);
+
+            if (age > 120) {
+                alert("Sa'id baad u da' weyntahay, da'dan lama aqbalayo.");
+            }
+            else if (age >= 18) {
+                // alert("Waxa tahay qaangar la diiwan galin karo.");
+            }
+            else if (age > 0 && age < 18) {
+                // alert("Waa yartahay ma lagu diwaan galin karo.");
+            }
+            else {
+                alert("Da'da aad galisay mid jirta ma ahan, fadlan markale ku celi.");
+            }
+
+             let dagmo = document.getElementById("address").value;
+
+            if (dagmo === "hodan") {
+                // alert("dagmadan wa dagma diiwangalsan");
+            }
+            else if (dagmo === "karaan") {
+                // alert("dagmadan wa dagma diiwangalsan");
+
+            }
+            else if (dagmo === "dayniile") {
+                // alert("dagmadan wa dagma diiwangalsan");
+
+            }
+            else if (dagmo === "hawlwadaag") {
+                // alert("dagmadan wa dagma diiwangalsan");
+
+            }
+            else {
+                alert("mahan dagmo diiwangalsan ama jirta, ee qora sida(hodan, hawlwadaag,karaan,dayniile)");
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam | form</title>
+    <link rel="stylesheet" href="school-magament.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="school-name">
+            <h2>SHABA PRIMARY & SECONDARY SCHOOL</h2>
+        </div>
+        <div class="user-profile">
+            <a href="log-in.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <nav class="sidebar">
+            <ul>
+               <li><a href="home-page.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="studet-form.html"><i class="fas fa-user-graduate"></i> Student File</a></li>
+                <li><a href="teacher-form.html"><i class="fas fa-chalkboard-teacher"></i> Teacher File</a></li>
+                <li><a href="manager-foem.html"><i class="fas fa-user-shield"></i> School Manager</a></li>
+                <li><a href="Finance-form.html"><i class="fas fa-money-bill-wave"></i> Lacagta (Finance)</a></li>
+                <li><a href="attendence.html"><i class="fas fa-money-bill-wave"></i> Attendance</a></li>
+                <li><a href="subjec-file.html"><i class="fas fa-book"></i> Subjects</a></li>
+                <li><a href="exam -file.html"><i class="fas fa-poll"></i> Imtixaanka (Exams)</a></li>
+            </ul>
+        </nav>
+
+        <section class="registration-form exam-form">
+            <h3><i class="fas fa-poll"></i> Maamulka Imtixaanka Exams</h3>
+
+            <div class="exam-container">
+                <div class="exam-section">
+                    <h4><i class="fas fa-edit"></i> Galinta Natiijada Ardayga</h4>
+                    <form action="#">
+                        <div class="form-group">
+                            <label>Ardayga</label>
+                            <input type="text" placeholder="Magaca Ardayga">
+                        </div>
+                        <div class="form-group">
+                            <label>Maaddada</label>
+                            <select>
+                                <option>Mathematics</option>
+                                <option>Physics</option>
+                                <option>Chemistry</option>
+                                <option>Arabic</option>
+                                <option>Biology</option>
+                                <option>English</option>
+                                <option>Somali</option>
+                                <option>Islamic Studies</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Nooca Imtixaanka</label>
+                            <select>
+                                <option>Mid-Term </option>
+                                <option>Final Exam </option>
+                                <option>Monthy Exams</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Dhibcaha Out of 100</label>
+                            <input type="number" placeholder="Tusaale: 85" max="100">
+                        </div>
+                        <button type="submit" class="exam-btn marks-btn">Save Result</button>
+                    </form>
+                </div>
+
+                <div class="exam-section">
+                    <h4><i class="fas fa-calendar-alt"></i> Jadwalka Imtixaanka</h4>
+                    <form action="#">
+                        <div class="form-group">
+                            <label>Taariikhda</label>
+                            <input type="date">
+                        </div>
+                        <div class="form-group">
+                            <label>Saacadda oo Soconaayo</label>
+                            <input type="time">
+                        </div>
+                        <div class="form-group">
+                            <label>Fasalka</label>
+                            <select>
+                                <option>Form 4</option>
+                                <option>Form 3</option>
+                                <option>Form 2</option>
+                                <option>Form 1</option>
+                                <option>class 8</option>
+                                <option>class 7</option>
+                                <option>class 6</option>
+                                <option>class 5</option>
+                                <option>class 4</option>
+                                <option>class 3</option>
+                                <option>class 2</option>
+                                <option>class 1</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Hoolka Exam ka</label>
+                            <input type="text" placeholder="Tusaale: form 4 ama Hall A .....">
+                        </div>
+                        <button type="submit" class="exam-btn schedule-btn">Create Schedule</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log-in</title>
+    <link rel="stylesheet" href="school-magament.css">
+</head>
+
+<body>
+
+
+    <section id="registration-form">
+        <form class="border" >
+            <h3> LOG_IN </h3>
+            <p>username = cabdiqani</p>
+            <p>password = 1234</p>
+            <input type="text" id="inp1" placeholder="Username">
+            <input type="text" id="inp2" placeholder="Password">
+            <button onclick="login()"> Log-in</button>
+        </form>
+    </section>
+
+    <script>
+        function login() {
+            let username = document.getElementById("inp1").value;
+            let password = document.getElementById("inp2").value;
+            if (username === "cabdiqani" && password === "1234") {
+                document.write("Login Successful! Kusoo dhawaaw");
+                window.location.href = "home-page.html";
+            }
+            else {
+                alert("Login Failed: Magaca ama Password-ka waa khalad!");
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

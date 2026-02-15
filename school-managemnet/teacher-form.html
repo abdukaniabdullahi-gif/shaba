@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher | form</title>
+    <link rel="stylesheet" href="school-magament.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<header class="main-header">
+    <div class="school-name">
+        <h2>SHABA PRIMARY & SECONDARY SCHOOL</h2>
+    </div>
+    <div class="user-profile">
+         <a href="log-in.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+</header>
+
+<div class="wrapper">
+    <nav class="sidebar">
+        <ul>
+            <li><a href="home-page.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="studet-form.html"><i class="fas fa-user-graduate"></i> Student File</a></li>
+                <li><a href="teacher-form.html"><i class="fas fa-chalkboard-teacher"></i> Teacher File</a></li>
+                <li><a href="manager-foem.html"><i class="fas fa-user-shield"></i> School Manager</a></li>
+                <li><a href="Finance-form.html"><i class="fas fa-money-bill-wave"></i> Lacagta (Finance)</a></li>
+                <li><a href="attendence.html"><i class="fas fa-money-bill-wave"></i> Attendance</a></li>
+                <li><a href="subjec-file.html"><i class="fas fa-book"></i> Subjects</a></li>
+                <li><a href="exam -file.html"><i class="fas fa-poll"></i> Imtixaanka (Exams)</a></li>
+        </ul>
+    </nav>
+
+    <section class="registration-form teacher-form">
+        <h3><i class="fas fa-chalkboard-teacher"></i> Diiwaangelinta Macallin Cusub</h3>
+        <form>
+            <div class="form-group-row">
+                <div class="form-group">
+                    <label>Magaca Oo Buuxa</label>
+                    <input type="text" placeholder="Tusaale: Maxamed Axmed Barre">
+                </div>
+                <div class="form-group">
+                    <label>Maaddada Subject</label>
+                    <select>
+                        <option>Mathematics</option>
+                        <option>Physics</option>
+                        <option>Chemistry</option>
+                        <option>Arabic</option>
+                        <option>Biology</option>
+                        <option>English</option>
+                        <option>Somali</option>
+                        <option>Islamic Studies</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group-row">
+                <div class="form-group">
+                    <label>Taleefanka</label>
+                    <input type="tel" id="contact" placeholder="061... ama 0777..." required>
+                </div>
+                <div class="form-group">
+                    <label>Mushaharka ($)</label>
+                    <input type="number" id="" placeholder="Tusaale: 300$--500$">
+                </div>
+            </div>
+
+            <div class="form-group-row">
+                <div class="form-group">
+                    <label>Heerka Waxbarasho Degree</label>
+                    <select>
+                        <option>Bachelor Degree</option>
+                        <option>Master's Degree</option>
+                        <option>PhD</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Da'da qofka</label>
+                    <input type="text" id="age" placeholder="da'da 25....60jir" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Khibradda Shaqo (CV/Experience Summary)</label>
+                <textarea rows="3" placeholder="Sharaxaad kooban oo ku saabsan khibradda macallinka..."></textarea>
+            </div>
+
+            <button type="submit" class="save-teacher-btn" onclick="taabo()">Diiwaangali Macallinka</button>
+        </form>
+    </section>
+</div>
+
+
+<script>
+    function taabo() {
+        let phone = document.getElementById("contact").value;
+
+        if (phone.startsWith("061")) {
+            // alert("Numberka waa saxanyahay waana Hormuud");
+        } else if (phone.startsWith("077")) {
+            // alert("Numberka waa saxanyahay waana Hormuud");
+        }
+        else {
+            alert("Numberka waa khaldan yahay, geli number Hormuud ah (061...ama 077...)");
+        }
+        let age = Number(document.getElementById("age").value);
+
+        if (age > 60) {
+            alert("da'da 60 wixi ka wayn ma qaadan karno, sorry !");
+        }
+        else if (age >= 25) {
+            // alert("Waxa tahay qaangar la diiwan galin karo.");
+        }
+        else if (age > 0 && age < 25) {
+            alert("da'da 24 wixi ka yar ma qaaadan karno");
+        }
+        else {
+            alert("Da'da aad galisay mid jirta ma ahan, fadlan markale ku celi.");
+        }
+
+    }
+
+</script>
+
+<body>
+
+</body>
+
+</html>

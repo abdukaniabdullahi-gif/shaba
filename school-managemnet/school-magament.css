@@ -497,6 +497,34 @@ input[list]::-webkit-calendar-picker-indicator {
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
+/* Marka shaashadu ka yar tahay 768px (Mobile & Tablets) */
+@media (max-width: 768px) {
+    
+    /* Waxaad halkan ku beddelaysaa Menu-ga si uu hoos ugu soo dhaco */
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Haddii aad leedahay qaybo dhinac-dhinac u yaalla (Side-by-side) */
+    .hero-content h1 {
+        font-size: 1.8rem; /* Qoraalka weyn yareey */
+    }
+
+    .container, .service-grid {
+        display: block; /* Ka dhig hal khaanad oo hoos u dhacaya */
+        width: 95%;
+    }
+
+    img {
+        max-width: 100%; /* Sawirradu yaanay ka bixin shaashadda */
+        height: auto;
+    }
+}
 .save-small{
     background-color: #3498db;
 }

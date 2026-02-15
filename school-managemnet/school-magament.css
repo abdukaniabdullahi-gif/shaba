@@ -497,34 +497,7 @@ input[list]::-webkit-calendar-picker-indicator {
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
-/* Marka shaashadu ka yar tahay 768px (Mobile & Tablets) */
-@media (max-width: 768px) {
-    
-    /* Waxaad halkan ku beddelaysaa Menu-ga si uu hoos ugu soo dhaco */
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
 
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    /* Haddii aad leedahay qaybo dhinac-dhinac u yaalla (Side-by-side) */
-    .hero-content h1 {
-        font-size: 1.8rem; /* Qoraalka weyn yareey */
-    }
-
-    .container, .service-grid {
-        display: block; /* Ka dhig hal khaanad oo hoos u dhacaya */
-        width: 95%;
-    }
-
-    img {
-        max-width: 100%; /* Sawirradu yaanay ka bixin shaashadda */
-        height: auto;
-    }
-}
 .save-small{
     background-color: #3498db;
 }
@@ -610,4 +583,127 @@ input:checked + .slider:before { transform: translateX(21px); }
 .big-avatar{
     width: 250px;
     height: 150px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+
+
+    .main-header {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .logout-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+ 
+    .sidebar {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+
+    .sidebar ul {
+        display: flex;
+        overflow-x: auto;
+        padding: 10px;
+    }
+
+    .sidebar ul li {
+        padding: 10px 15px;
+        white-space: nowrap;
+    }
+
+    .main-content {
+        padding: 10px;
+        margin-left: 0;
+        height: auto;
+    }
+
+ 
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+ 
+    .registration-form,
+    .teacher-form,
+    .manager-form,
+    .subject-form,
+    .exam-form,
+    .attendance-system {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .form-group-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+ 
+    .save-teacher-btn,
+    .save-manager-btn,
+    .save-subject-btn,
+    .finance-btn,
+    .exam-btn {
+        width: 100%;
+    }
+
+    .finance-container {
+        flex-direction: column;
+    }
+
+    .finance-section {
+        min-width: 100%;
+    }
+
+    .exam-container {
+        flex-direction: column;
+    }
+
+    .exam-section {
+        min-width: 100%;
+    }
+
+
+    .attendance-system {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    
+    #registration-form {
+        width: 95%;
+        height: auto;
+        margin: 40px auto;
+        flex-direction: column;
+    }
+
+    #registration-form input {
+        width: 100%;
+    }
+
+ 
+    .big-avatar {
+        width: 100%;
+        height: auto;
+    }
 }

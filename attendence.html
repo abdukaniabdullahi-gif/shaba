@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendence| form</title>
+    <link rel="stylesheet" href="school-magament.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="school-name">
+            <h2>SHABA PRIMARY & SECONDARY SCHOOL</h2>
+        </div>
+        <div class="user-profile">
+            <a href="log-in.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="home-page.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="studet-form.html"><i class="fas fa-user-graduate"></i> Student File</a></li>
+                <li><a href="teacher-form.html"><i class="fas fa-chalkboard-teacher"></i> Teacher File</a></li>
+                <li><a href="manager-foem.html"><i class="fas fa-user-shield"></i> School Manager</a></li>
+                <li><a href="Finance-form.html"><i class="fas fa-money-bill-wave"></i> Lacagta (Finance)</a></li>
+                <li><a href="attendence.html"><i class="fas fa-money-bill-wave"></i> Attendance</a></li>
+                <li><a href="subjec-file.html"><i class="fas fa-book"></i> Subjects</a></li>
+                <li><a href="exam -file.html"><i class="fas fa-poll"></i> Imtixaanka (Exams)</a></li>
+            </ul>
+        </nav>
+
+        <div class="attendance-system">
+            <div class="tabs">
+                <button class="tab-link active" onclick="openTab(event, 'StudentTab')">Ardayda (Students)</button>
+                <button class="tab-link" onclick="openTab(event, 'TeacherTab')">Macalimiinta (Teachers)</button>
+                <button class="tab-link" onclick="openTab(event, 'ManagerTab')">Maamulka (Managers)</button>
+            </div>
+
+            <div id="StudentTab" class="tab-content active">
+                <div class="form-header">
+                    <h3>Xaadirinta Ardayda - </h3>
+                    <input type="date" class="date-input">
+                </div>
+                <table class="att-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Ardayga</th>
+                            <th>Status</th>
+                            <th>Class</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#S102</td>
+                            <td><class="avatar"> Cali Axmed</td>
+                            <td>
+                                <div class="status-options">
+                                    <label class="p-btn"><input type="radio" name="s1" checked> <span>P</span></label>
+                                    <label class="a-btn"><input type="radio" name="s1"> <span>A</span></label>
+                                </div>
+                            </td>
+                            <td><button class="save-small">Form-4</button></td>
+                        </tr>
+                        <tr>
+                            <td>#S2026</td>
+                            <td><class="avatar"> Hassan Cusman</td>
+                            <td>
+                                <div class="status-options">
+                                    <label class="p-btn"><input type="radio" name="s1" checked> <span>P</span></label>
+                                    <label class="a-btn"><input type="radio" name="s1"> <span>A</span></label>
+                                </div>
+                            </td>
+                            <td><button class="save-small">Form-4</button></td>
+                        </tr>
+                        <tr>
+                            <td>#S1000</td>
+                            <td><class="avatar"> Cabdibasid Omar</td>
+                            <td>
+                                <div class="status-options">
+                                    <label class="p-btn"><input type="radio" name="s1" checked> <span>P</span></label>
+                                    <label class="a-btn"><input type="radio" name="s1"> <span>A</span></label>
+                                </div>
+                            </td>
+                            <td><button class="save-small">Form-4</button></td>
+                        </tr>
+                        <tr>
+                            <td>#3250</td>
+                            <td><class="avatar"> Maryan Cali</td>
+                            <td>
+                                <div class="status-options">
+                                    <label class="p-btn"><input type="radio" name="s1" checked> <span>P</span></label>
+                                    <label class="a-btn"><input type="radio" name="s1"> <span>A</span></label>
+                                </div>
+                            </td>
+                            <td><button class="save-small">Form-4</button></td>
+                        </tr>
+                        <tr>
+                            <td>#S2004</td>
+                            <td><class="avatar"> Fadumo Xassan</td>
+                            <td>
+                                <div class="status-options">
+                                    <label class="p-btn"><input type="radio" name="s1" checked> <span>P</span></label>
+                                    <label class="a-btn"><input type="radio" name="s1"> <span>A</span></label>
+                                </div>
+                            </td>
+                            <td><button class="save-small">Form-4</button></td>
+                        </tr>
+                        <tr>
+                            <td>#S0102</td>
+                            <td><class="avatar"> Cali Nageeye</td>
+                            <td>
+                                <div class="status-options">
+                                    <label class="p-btn"><input type="radio" name="s1" checked> <span>P</span></label>
+                                    <label class="a-btn"><input type="radio" name="s1"> <span>A</span></label>
+                                </div>
+                            </td>
+                            <td><button class="save-small">Form-4</button></td>
+                        </tr>
+                        <tr>
+                            <td>#00530</td>
+                            <td><class="avatar"> Axmed Cali </td>
+                            <td>
+                                <div class="status-options">
+                                    <label class="p-btn"><input type="radio" name="s1" checked> <span>P</span></label>
+                                    <label class="a-btn"><input type="radio" name="s1"> <span>A</span></label>
+                                </div>
+                            </td>
+                            <td><button class="save-small">Form-4</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="TeacherTab" class="tab-content">
+                <div class="form-header">
+                    <h3>Xaadirinta Macalimiinta</h3>
+                    <span class="badge">Staff Only </span>
+                </div>
+                <table class="att-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Macallinka</th>
+                            <th>Subject</th>
+                            <th>Time In</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#T005</td>
+                            <td><class="avatar"> Ms. Faadumo</td>
+                            <td>Maths</td>
+                            <td><input type="time" value="11:30"></td>
+                            <td><select class="select-att">
+                                    <option>Present</option>
+                                    <option>Late</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>#T030</td>
+                            <td><class="avatar"> Mr. Cabdi-nuur</td>
+                            <td>Biology</td>
+                            <td><input type="time" value="10:30"></td>
+                            <td><select class="select-att">
+                                    <option>Present</option>
+                                    <option>Late</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>#T010</td>
+                            <td><class="avatar"> Mr. Cabdirashiid</td>
+                            <td>Science</td>
+                            <td><input type="time" value="07:30"></td>
+                            <td><select class="select-att">
+                                    <option>Present</option>
+                                    <option>Late</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>#T005</td>
+                            <td><class="avatar"> Ms. Haawo</td>
+                            <td>islamic </td>
+                            <td><input type="time" value="08:00"></td>
+                            <td><select class="select-att">
+                                    <option>Present</option>
+                                    <option>Late</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>#T350</td>
+                            <td><class="avatar"> Mr. Luqaman</td>
+                            <td>Arabic</td>
+                            <td><input type="time" value="09:30"></td>
+                            <td><select class="select-att">
+                                    <option>Present</option>
+                                    <option>Late</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>#T030</td>
+                            <td><class="avatar"> Mr. Cabdiqani</td>
+                            <td>Physics</td>
+                            <td><input type="time" value="10:10"></td>
+                            <td><select class="select-att">
+                                    <option>Present</option>
+                                    <option>Late</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>#T500</td>
+                            <td><class="avatar"> Ms. Maryan</td>
+                            <td>English</td>
+                            <td><input type="time" value="07:00"></td>
+                            <td><select class="select-att">
+                                    <option>Present</option>
+                                    <option>Late</option>
+                                </select></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="ManagerTab" class="tab-content">
+                <div class="form-header">
+                    <h3>Xaadirinta Maamulayaasha</h3>
+                </div>
+                <div class="manager-grid">
+                    <div class="manager-card">
+                        <img src="WhatsApp_Image_2026-01-10_at_1.38.59_PM_1-removebg-preview.png" class="big-avatar">
+                        <h4>Pro. Dr Abdukani (Principal)</h4>
+                        <p>Office: Room 1</p>
+                        <div class="toggle-presence">
+                            <span>Off-Duty</span>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider round"></span>
+                            </label>
+                            <span>On-Duty</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+
+</body>
+
+</html>

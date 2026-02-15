@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fianance | form</title>
+    <link rel="stylesheet" href="school-magament.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="school-name">
+            <h2>SHABA PRIMARY & SECONDARY SCHOOL</h2>
+        </div>
+        <div class="user-profile">
+            <a href="log-in.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="home-page.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="studet-form.html"><i class="fas fa-user-graduate"></i> Student File</a></li>
+                <li><a href="teacher-form.html"><i class="fas fa-chalkboard-teacher"></i> Teacher File</a></li>
+                <li><a href="manager-foem.html"><i class="fas fa-user-shield"></i> School Manager</a></li>
+                <li><a href="Finance-form.html"><i class="fas fa-money-bill-wave"></i> Lacagta (Finance)</a></li>
+                <li><a href="attendence.html"><i class="fas fa-money-bill-wave"></i> Attendance</a></li>
+                <li><a href="subjec-file.html"><i class="fas fa-book"></i> Subjects</a></li>
+                <li><a href="exam -file.html"><i class="fas fa-poll"></i> Imtixaanka (Exams)</a></li>
+            </ul>
+        </nav>
+
+        <section class="registration-form finance-form">
+            <h3><i class="fas fa-money-check-alt"></i> Maamulka Lacagta Finance Management</h3>
+
+            <div class="finance-container">
+                <div class="finance-section">
+                    <h4><i class="fas fa-hand-holding-usd"></i> Qaabashada khidmada Fees</h4>
+                    <form action="#">
+                        <div class="form-group">
+                            <label>Dooro Ardayga</label>
+                            <input type="text" list="students" placeholder="Ku qor magaca ardayga....">
+                            <datalist id="students">
+                                <option value="S001 - Axmed Cali">
+                                <option value="S002 - Faadumo Jaamac">
+                            </datalist>
+                        </div>
+                        <div class="form-group">
+                            <label>Nooca Lacagta</label>
+                            <select>
+                                <option>Monthly Fee </option>
+                                <option>Registration Fee</option>
+                                <option>Exam Fee</option>
+                                <option>school Bus Fee</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Cadadka Lacagta $</label>
+                            <input type="number" id="lacag" placeholder="0.00$">
+                        </div>
+                        <button type="submit" onclick="taabo()" class="finance-btn fee-btn">Qabo Lacagta</button>
+                    </form>
+                </div>
+
+                <div class="finance-section">
+                    <h4><i class="fas fa-file-invoice-dollar"></i> Kharashyada Ka Baxay Schoolka</h4>
+                    <form action="#">
+                        <div class="form-group">
+                            <label>Nooca Kharashka</label>
+                            <input type="text" placeholder="Tusaale: Korontada, Dayactir...">
+                        </div>
+                        <div class="form-group">
+                            <label>Taariikhda</label>
+                            <input type="date">
+                        </div>
+                        <div class="form-group">
+                            <label>Cadadka Lacagat $</label>
+                            <input type="number" id="shabaj" placeholder="0.00$">
+                        </div>
+                        <!-- <button type="submit" class="finance-btn expense-btn">Diiwaangali
+                            Kharashka</button> -->
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <Script>
+        function taabo() {
+            let lacag = document.getElementById("lacag").value;
+
+            if (lacag === "20") {
+                alert("lacagta aad so galisay wa Monthly Fee ");
+            } else if (lacag === "5") {
+                alert("lacagta aad soo galisay wa Registration Fee ");
+            } else if (lacag === "10") {
+                alert("lacagta aad soo galisay wa Exam Fee ");
+            } else if (lacag === "15") {
+                alert("lacagta aad soo galisay wa School Bus Fee ");
+            } else {
+                alert("lacagta so galisay ma ahan mid jirta");
+            }
+        }
+
+
+
+
+    </Script>
+</body>
+
+</html>

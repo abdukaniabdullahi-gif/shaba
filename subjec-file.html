@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>subject | form</title>
+    <link rel="stylesheet" href="school-magament.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+     <header class="main-header">
+        <div class="school-name">
+             <h2>SHABA PRIMARY & SECONDARY SCHOOL</h2>
+        </div>
+        <div class="user-profile">
+           <a href="log-in.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <nav class="sidebar">
+            <ul>
+                 <li><a href="home-page.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="studet-form.html"><i class="fas fa-user-graduate"></i> Student File</a></li>
+                <li><a href="teacher-form.html"><i class="fas fa-chalkboard-teacher"></i> Teacher File</a></li>
+                <li><a href="manager-foem.html"><i class="fas fa-user-shield"></i> School Manager</a></li>
+                <li><a href="Finance-form.html"><i class="fas fa-money-bill-wave"></i> Lacagta (Finance)</a></li>
+                <li><a href="attendence.html"><i class="fas fa-money-bill-wave"></i> Attendance</a></li>
+                <li><a href="subjec-file.html"><i class="fas fa-book"></i> Subjects</a></li>
+                <li><a href="exam -file.html"><i class="fas fa-poll"></i> Imtixaanka (Exams)</a></li>
+            </ul>
+        </nav>
+        <section class="registration-form subject-form">
+            <h3><i class="fas fa-book"></i> Diiwaangelinta Maadda Cusub</h3>
+            <form action="#">
+                <div class="form-group-row">
+                    <div class="form-group">
+                        <label>Magaca Maaddada</label>
+                        <input type="text" placeholder="Tusaale: Chemistry, Taariikh..." required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nooca Maaddada Category</label>
+                        <select>
+                            <option>Science</option>
+                            <option>Arts </option>
+                            <option>Languages</option>
+                            <option>Mathematics</option>
+                            <option>Islamic Religion</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group-row">
+                    <div class="form-group">
+                        <label>Fasalka Loogu Talagalay</label>
+                        <select>
+                            <option>Primary - Grade 1-8</option>
+                            <option>Secondary - Form 1</option>
+                            <option>Secondary - Form 2</option>
+                            <option>Secondary - Form 3</option>
+                            <option>Secondary - Form 4</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Dhibcaha Baas-ka Passing Score</label>
+                        <input type="number" placeholder="Tusaale: 50" min="0" max="100">
+                    </div>
+                </div>
+
+                <button type="submit" class="save-subject-btn">Keydi Maaddada</button>
+            </form>
+        </section>
+    </div>
+
+</body>
+
+</html>

@@ -662,8 +662,11 @@ body {
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(26, 188, 156, 0.3);
+   
 }
-
+.btn-primary a {
+    text-decoration: none;
+}
 /* Modern Stats Cards */
 .modern-stats {
     display: grid;
@@ -814,7 +817,86 @@ body {
     color: white;
 }
 
+/* Badhanka menu-ka - Computer-ka waa ku qarsoon yahay */
+.menu-btn {
+    display: none;
+    background: #1abc9c;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+@media screen and (max-width: 768px) {
+    /* Badhanka Menu-ka oo leh animation yar */
+    .menu-btn {
+        display: block;
+        transition: transform 0.3s ease;
+    }
+    
+    /* Marka menu-ku furan yahay badhanku ha wareego */
+    .menu-btn.open {
+        transform: rotate(90px);
+        background-color: #e74c3c; /* Midabka casaan ha isku beddelo */
+    }
 
+    /* Sidebar-ka oo leh Animation silid ah iyo madoobaan */
+    .sidebar {
+        left: -280px; /* In yar ka sii fogee */
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Animation aad u smooth ah */
+        box-shadow: none;
+    }
+
+    /* Marka uu firfircoon yahay (Active) */
+    .sidebar.active {
+        left: 5px !important;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* In yar oo animation ah u yeel liisaska gudaha ku jira */
+    .sidebar.active .nav-links li {
+        animation: slideIn 0.4s ease forwards;
+        opacity: 0;
+    }
+
+    /* Mid mid u soo bixi liisaska (Stagger effect) */
+    .sidebar.active li:nth-child(1) { animation-delay: 0.1s; }
+    .sidebar.active li:nth-child(2) { animation-delay: 0.2s; }
+    .sidebar.active li:nth-child(3) { animation-delay: 0.3s; }
+}
+
+/* Keyframes loogu talagalay liisaska gudaha */
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 768px) {
+    .menu-btn {
+        display: block; /* Mobile-ka kaliya ka soo muuqo */
+    }
+
+    .sidebar {
+        left: -260px; /* Marka hore qari */
+        transition: all 0.3s ease;
+        z-index: 1001;
+    }
+
+    .sidebar.active {
+        left: 5px !important; /* Marka la riixo soo bixi */
+    }
+}
 
 /* --- RESPONSIVE SETTINGS (Media Queries) --- */
 
@@ -823,28 +905,38 @@ body {
     .sidebar {
         width: 200px;
     }
+
     .main-content {
         margin-left: 210px;
     }
+
     .dashboard-grid {
-        grid-template-columns: 1fr; /* Labadii dhinac istaagi jiray mid ha iska kor maraa */
+        grid-template-columns: 1fr;
+        /* Labadii dhinac istaagi jiray mid ha iska kor maraa */
     }
 }
 
 /* 2. Moobilka (Ka yar 768px) */
 @media screen and (max-width: 768px) {
+
     /* Header-ka: Magaca dugsiga ha yaraado si uu boos u helo */
     .school-name {
         font-size: 16px;
     }
-    
+
     .top-header {
         padding: 0 10px;
     }
 
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        /* Labadii dhinac istaagi jiray mid ha iska kor maraa */
+    }
+
     /* Sidebar-ka: Moobilka waa inuu qarsamaa (Waxaana lagu furi karaa JavaScript hadhow) */
     .sidebar {
-        left: -260px; /* Wuu dhuumanayaa */
+        left: -260px;
+        /* Wuu dhuumanayaa */
         transition: 0.3s;
     }
 
@@ -859,7 +951,7 @@ body {
     .form-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .full-width {
         grid-column: span 1;
     }
@@ -869,7 +961,8 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .finance-summary, .attendance-summary {
+    .finance-summary,
+    .attendance-summary {
         grid-template-columns: 1fr;
     }
 
@@ -884,15 +977,17 @@ body {
     }
 
     .styled-table {
-        min-width: 600px; /* Inuu scroll yeesho si aanu qoraalku isugu dhex yaacin */
+        min-width: 600px;
+        /* Inuu scroll yeesho si aanu qoraalku isugu dhex yaacin */
     }
 
     /* Buttons: Moobilka ha iska kor maraan */
     .form-actions {
         flex-direction: column;
     }
-    
-    .btn-save, .btn-clear {
+
+    .btn-save,
+    .btn-clear {
         width: 100%;
     }
 }
@@ -904,7 +999,7 @@ body {
         height: 35px;
         font-size: 18px;
     }
-    
+
     .logout-btn {
         padding: 8px 12px;
         font-size: 12px;

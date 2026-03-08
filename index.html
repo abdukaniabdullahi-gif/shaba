@@ -13,6 +13,7 @@
 
     <header class="top-header">
         <div class="header-left">
+            <button id="menu-toggle" class="menu-btn">☰</button>
             <div class="logo">S</div>
             <h1 class="school-name">School Management</h1>
         </div>
@@ -55,7 +56,7 @@
                     <p>Maanta waa Axad, 08 March 2026. Halkaan ka eeg xaaladda iskuulka.</p>
                 </div>
                 <div class="header-btns">
-                    <button class="btn-primary">+ Add New Student</button>
+                    <button class="btn-primary"><a href="student-form.html">+ Add New Student </a></button>
                 </div>
             </div>
 
@@ -124,18 +125,29 @@
         </main>
     </div>
     <script>
-        $(document).ready(function () {
+   $(document).ready(function () {
+    // Toggle Sidebar iyo Badhanka calaamaddiisa
+    $("#menu-toggle").on("click", function () {
+        $(".sidebar").toggleClass("active");
+        $(this).toggleClass("open"); // Ku dar class-ka "open"
 
-            $("#hello").on("click", function (e) {
-                e.preventDefault();
-                $("#hello1").slideDown();
-            });
-            $("#hi").on("click", function (e) {
-                e.preventDefault();
-                $("#hi1").slideDown();
-            });
-        });
-    </script>
+        // Bedel calaamadda ☰ iyo X
+        if ($(this).hasClass("open")) {
+            $(this).text("✕");
+        } else {
+            $(this).text("☰");
+        }
+    });
+
+    // Markaad meel bannaanka ah taabato ha xirmo
+    $(document).on("click", function (e) {
+        if (!$(e.target).closest('.sidebar, #menu-toggle').length) {
+            $(".sidebar").removeClass("active");
+            $("#menu-toggle").removeClass("open").text("☰");
+        }
+    });
+});
+</script>
 </body>
 
 </html>

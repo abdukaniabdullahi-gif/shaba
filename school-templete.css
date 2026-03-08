@@ -1010,3 +1010,29 @@ body {
         font-size: 20px;
     }
 }
+@media screen and (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 70px; /* Header-ka hoostiisa */
+        left: -280px; 
+        width: 260px;
+        height: 100vh; /* Screen-ka oo dhan hoos ha u aado */
+        background-color: #2c3e50;
+        z-index: 9999; /* Inuu ka sareeyo wax kasta */
+        overflow-y: auto; /* Haddii links-ku bataan in la scroll-gareyn karo */
+        transition: all 0.3s ease;
+        display: block !important; /* Hubi inaanu qarsanayn */
+    }
+
+    .sidebar.active {
+        left: 0 !important;
+    }
+
+    /* Submenu-ga booska uu qaadanayo */
+    .submenu {
+        display: none; /* Markii hore ha qarsanaado */
+        background-color: #34495e; /* Midab yar oo ka duwan sidebar-ka */
+        padding-left: 0;
+        width: 100%;
+    }
+}

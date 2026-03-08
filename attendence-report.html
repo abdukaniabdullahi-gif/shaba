@@ -67,7 +67,7 @@
                         <h3>92%</h3>
                     </div>
                     <div class="att-card late">
-                       <span>Late Arrivals</span>
+                        <span>Late Arrivals</span>
                         <h3>5%</h3>
                     </div>
                     <div class="att-card absent">
@@ -82,7 +82,7 @@
                             <label>Select Grade</label>
                             <select>
                                 <option>All Classes</option>
-                                 <option value="Grade 1">Grade 1</option>
+                                <option value="Grade 1">Grade 1</option>
                                 <option value="Grade 2">Grade 2</option>
                                 <option value="Grade 3">Grade 3</option>
                                 <option value="Grade 4">Grade 4</option>
@@ -144,14 +144,18 @@
 
     <script>
         $(document).ready(function () {
-
+            // Hubi in click-ku shaqaynayo
             $("#hello").on("click", function (e) {
                 e.preventDefault();
-                $("#hello1").slideDown();
+                e.stopPropagation(); // Jooji in click-ku u gudbo meelo kale
+                $("#hello1").stop().slideToggle(400); // .stop() wuxuu joojiyaa animation-ada is dul fuulay
+                console.log("Forms clicked!"); // Tani waxay kuu muujinaysaa inuu shaqaynayo
             });
+
             $("#hi").on("click", function (e) {
                 e.preventDefault();
-                $("#hi1").slideDown();
+                e.stopPropagation();
+                $("#hi1").stop().slideToggle(400);
             });
         });
     </script>

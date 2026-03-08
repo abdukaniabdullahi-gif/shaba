@@ -134,14 +134,18 @@
 
     <script>
         $(document).ready(function () {
-
+            // Hubi in click-ku shaqaynayo
             $("#hello").on("click", function (e) {
                 e.preventDefault();
-                $("#hello1").slideDown();
+                e.stopPropagation(); // Jooji in click-ku u gudbo meelo kale
+                $("#hello1").stop().slideToggle(400); // .stop() wuxuu joojiyaa animation-ada is dul fuulay
+                console.log("Forms clicked!"); // Tani waxay kuu muujinaysaa inuu shaqaynayo
             });
+
             $("#hi").on("click", function (e) {
                 e.preventDefault();
-                $("#hi1").slideDown();
+                e.stopPropagation();
+                $("#hi1").stop().slideToggle(400);
             });
         });
     </script>

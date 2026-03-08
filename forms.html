@@ -50,16 +50,18 @@
 
     <script>
         $(document).ready(function () {
-            // Dropdown-ka FORMS
+            // Hubi in click-ku shaqaynayo
             $("#hello").on("click", function (e) {
-                e.preventDefault(); // Ka jooji inuu bog kale aado
-                $("#hello1").slideToggle(300); // 300ms ayuu ku furmayaa/xirmayaa
+                e.preventDefault();
+                e.stopPropagation(); // Jooji in click-ku u gudbo meelo kale
+                $("#hello1").stop().slideToggle(400); // .stop() wuxuu joojiyaa animation-ada is dul fuulay
+                console.log("Forms clicked!"); // Tani waxay kuu muujinaysaa inuu shaqaynayo
             });
 
-            // Dropdown-ka REPORTS
             $("#hi").on("click", function (e) {
                 e.preventDefault();
-                $("#hi1").slideToggle(300);
+                e.stopPropagation();
+                $("#hi1").stop().slideToggle(400);
             });
         });
     </script>

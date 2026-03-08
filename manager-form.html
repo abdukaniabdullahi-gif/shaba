@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teacher | Form</title>
+    <title>Manager | Form</title>
     <link rel="stylesheet" href="school-templete.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
@@ -49,93 +49,92 @@
         </nav>
 
 
+
         <div class="main-content">
             <div class="form-wrapper">
                 <div class="form-title">
-                    <h2>Teacher Registration Form</h2>
-                    <p>Fadlan geli macluumaadka macallinka cusub ee ku soo biiraya dugsiga.</p>
+                    <h2>Manager Registration Form</h2>
+                    <p>Diiwaangelinta maamulayaasha nidaamka iyo madaxda qaybaha.</p>
                 </div>
 
-                <form action="#" method="POST" class="teacher-registration-form">
+                <form action="#" method="POST" class="manager-registration-form">
 
-                    <div class="section-header">Personal Information</div>
+                    <div class="section-header">Basic Information</div>
                     <div class="form-grid">
                         <div class="input-field">
                             <label>Full Name</label>
-                            <input type="text" placeholder="Magaca oo saddexan" required>
+                            <input type="text" placeholder="Magaca maamulaha oo buuxa" required>
                         </div>
                         <div class="input-field">
-                            <label>Teacher ID & Staff No</label>
-                            <input type="text" placeholder="Tusaale: TCH-2024" required>
+                            <label>Employee ID</label>
+                            <input type="text" placeholder="Tusaale: MGR-501" required>
                         </div>
                         <div class="input-field">
-                            <label>Gender</label>
-                            <select required>
-                                <option value="">Dooro...</option>
-                                <option value="Male">Lab & Male</option>
-                                <option value="Female">Dheddig & Female</option>
-                            </select>
+                            <label>Email Address</label>
+                            <input type="email" placeholder="manager@school.com" required>
                         </div>
                         <div class="input-field">
                             <label>Phone Number</label>
-                            <input type="tel" placeholder="061... 077..." required>
+                            <input type="tel" placeholder="061xxxxxxx" required>
                         </div>
                     </div>
 
-                    <div class="section-header">Professional Details</div>
+                    <div class="section-header">Job Role & Responsibilities</div>
                     <div class="form-grid">
                         <div class="input-field">
-                            <label>Primary Subject</label>
+                            <label>Management Role</label>
                             <select required>
-                                <option value="">Dooro Maaddada...</option>
-                                <option value="Math">Mathematics</option>
-                                <option value="English">English</option>
-                                <option value="Physics">Physics</option>
-                                <option value="Chemistry">Chemistry</option>
-                                <option value="Cilmiga Bulshada">Cilmiga Bulshada</option>
-                                <option value="Geography">Geography</option>
-                                <option value="History">History</option>
-                                <option value="Somali">Somali Language</option>
-                                <option value="Biology">Biology</option>
+                                <option value="">Dooro Booska...</option>
+                                <option value="Principal">Principal (Maamulaha Guud)</option>
+                                <option value="Vice Principal">Vice Principal</option>
+                                <option value="HOD">Head of Department (HOD)</option>
+                                <option value="HR Manager">HR Manager</option>
+                                <option value="Admin">System Admin</option>
                             </select>
                         </div>
                         <div class="input-field">
-                            <label>Highest Qualification</label>
+                            <label>Department</label>
                             <select required>
-                                <option value="">Dooro Heerka...</option>
-                                <option value="Diploma">Diploma</option>
-                                <option value="Bachelor">Bachelor Degree</option>
-                                <option value="Master">Master Degree</option>
-                                <option value="Phd">Phd Degree</option>
+                                <option value="">Dooro Qaybta...</option>
+                                <option value="Academic">Academic</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Administration">Administration</option>
+                                <option value="Examination">Examination</option>
                             </select>
                         </div>
                         <div class="input-field">
-                            <label>Joining Date</label>
-                            <input type="date" required>
+                            <label>Employment Type</label>
+                            <select required>
+                                <option value="Full-time">Full-time</option>
+                                <option value="Contract">Contract</option>
+                            </select>
                         </div>
                         <div class="input-field">
-                            <label>Monthly Salary $</label>
-                            <input type="number" placeholder="Geli lacagta..." required>
+                            <label>Office Number</label>
+                            <input type="text" placeholder="Tusaale: Office A-12">
                         </div>
                     </div>
 
-                    <div class="section-header">Contact & Address</div>
+                    <div class="section-header">System Credentials</div>
                     <div class="form-grid">
-                        <div class="input-field full-width">
-                            <label>Current Address</label>
-                            <input type="text" placeholder="Degmada, Xaafadda iyo Jidka">
+                        <div class="input-field">
+                            <label>Username</label>
+                            <input type="text" placeholder="Username-ka nidaamka" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Password</label>
+                            <input type="password" placeholder="Password adag" required>
                         </div>
                     </div>
 
                     <div class="form-actions">
                         <button type="reset" class="btn-clear">Nadiifi</button>
-                        <button type="submit" class="btn-save">Kaydi Macallinka</button>
+                        <button type="submit" class="btn-save">Diiwaangeli Maamulaha</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-
 
     <script>
         $(document).ready(function () {
@@ -150,7 +149,6 @@
             });
         });
     </script>
-
 
 </body>
 

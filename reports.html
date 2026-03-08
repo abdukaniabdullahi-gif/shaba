@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+    <link rel="stylesheet" href="school-templete.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <header class="top-header">
+        <div class="header-left">
+            <div class="logo">S</div>
+            <h1 class="school-name">School Management</h1>
+        </div>
+        <div class="header-right">
+            <a href="login.html" class="logout-btn">Logout</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <ul class="nav-links">
+                <li><a href="index.html">Dashboard</a></li>
+
+                <div>
+                    <li><a class="dropdown-label" href="forms.html" id="hello">FORMS</a></li>
+                </div>
+                <div>
+                    <ul class="submenu" id="hello1">
+                        <li><a href="student-form.html">Student Form</a></li>
+                        <li><a href="teacher-form.html">Teacher Form</a></li>
+                        <li><a href="manager-form.html">Manager Form</a></li>
+                        <li><a href="finance-form.html">Finance Form</a></li>
+                        <li><a href="attendence-form.html">Attendance Form</a></li>
+                    </ul>
+                </div>
+
+                <li> <a href="reports.html" class="dropdown-label" id="hi">REPORTS</a></li>
+                <ul class="submenu" id="hi1">
+                    <li><a href="student-report.html">Student Report</a></li>
+                    <li><a href="finance-report.html">Finance Report</a></li>
+                    <li><a href="attendence-report.html">Attendance Report</a></li>
+                </ul>
+            </ul>
+        </nav>
+    </div>
+    <script>
+        $(document).ready(function () {
+
+            $("#hello").on("click", function (e) {
+                e.preventDefault();
+                $("#hello1").slideDown();
+            });
+            $("#hi").on("click", function (e) {
+                e.preventDefault();
+                $("#hi1").slideDown();
+            });
+        });
+    </script>
+</body>
+
+</html>

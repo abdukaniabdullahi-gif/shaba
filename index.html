@@ -1,41 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="so">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>log-in</title>
-    <link rel="stylesheet" href="school-magament.css">
+    <title>Shaba P&S | School Management</title>
+    <link rel="stylesheet" href="school-templete.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
 
+    <header class="top-header">
+        <div class="header-left">
+            <div class="logo">S</div>
+            <h1 class="school-name">School Management</h1>
+        </div>
+        <div class="header-right">
+            <a href="login.html" class="logout-btn">Logout</a>
+        </div>
+    </header>
 
-    <section id="registration-form">
-        <form class="border" >
-            <h3> LOG_IN </h3>
-            <p>username = cabdiqani</p>
-            <p>password = 1234</p>
-            <input type="text" id="inp1" placeholder="Username">
-            <input type="text" id="inp2" placeholder="Password">
-            <button onclick="login()"> Log-in</button>
-        </form>
-    </section>
+    <div class="container">
+        <nav class="sidebar">
+            <ul class="nav-links">
+                <li><a href="index.html">Dashboard</a></li>
 
+                <div>
+                    <li><a class="dropdown-label" href="forms.html" id="hello">FORMS</a></li>
+                </div>
+                <div>
+                    <ul class="submenu" id="hello1">
+                        <li><a href="student-form.html">Student Form</a></li>
+                        <li><a href="teacher-form.html">Teacher Form</a></li>
+                        <li><a href="manager-form.html">Manager Form</a></li>
+                        <li><a href="finance-form.html">Finance Form</a></li>
+                        <li><a href="attendence-form.html">Attendance Form</a></li>
+                    </ul>
+                </div>
+
+                <li> <a href="reports.html" class="dropdown-label" id="hi">REPORTS</a></li>
+                <ul class="submenu" id="hi1">
+                    <li><a href="student-report.html">Student Report</a></li>
+                    <li><a href="finance-report.html">Finance Report</a></li>
+                    <li><a href="attendence-report.html">Attendance Report</a></li>
+                </ul>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <div class="dashboard-header">
+                <div class="welcome-text">
+                    <h2>Haye, Maamule! 👋</h2>
+                    <p>Maanta waa Axad, 08 March 2026. Halkaan ka eeg xaaladda iskuulka.</p>
+                </div>
+                <div class="header-btns">
+                    <button class="btn-primary">+ Add New Student</button>
+                </div>
+            </div>
+
+            <section class="modern-stats">
+                <div class="stat-card blue">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-info">
+                        <h3>5,250</h3>
+                        <p>Ardayda Dhigata</p>
+                    </div>
+                </div>
+                <div class="stat-card green">
+                    <div class="stat-icon">👨‍🏫</div>
+                    <div class="stat-info">
+                        <h3>45</h3>
+                        <p>Macallimiinta</p>
+                    </div>
+                </div>
+                <div class="stat-card purple">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-info">
+                        <h3>$15,400</h3>
+                        <p>Dakhliga Bishan</p>
+                    </div>
+                </div>
+                <div class="stat-card orange">
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-info">
+                        <h3>92%</h3>
+                        <p>Joogitaanka</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="dashboard-grid">
+                <div class="recent-activity">
+                    <h3>Diiwaankii U dambeeyey</h3>
+                    <ul class="activity-list">
+                        <li>
+                            <span class="act-icon st">S</span>
+                            <div class="act-text">
+                                <strong>Axmed Cali</strong> ayaa la diiwaangeliyey.
+                                <small>2 daqiiqo ka hor</small>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="act-icon fi">F</span>
+                            <div class="act-text">
+                                <strong>Fadumo Jaamac</strong> ayaa bixisay $50.
+                                <small>15 daqiiqo ka hor</small>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="quick-links">
+                    <h3>Helitaan Dhakhso ah</h3>
+                    <div class="links-grid">
+                        <a href="student-form.html" class="link-item">New Student</a>
+                        <a href="finance-form.html" class="link-item">Collect Fees</a>
+                        <a href="attendence-form.html" class="link-item">Mark Attendance</a>
+                        <a href="student-report.html" class="link-item">View Reports</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
     <script>
-        function login() {
-            let username = document.getElementById("inp1").value;
-            let password = document.getElementById("inp2").value;
-            if (username === "cabdiqani" && password === "1234") {
-                document.write("Login Successful! Kusoo dhawaaw");
-                window.location.href = "home-page.html";
-            }
-            else {
-                alert("Login Failed: Magaca ama Password-ka waa khalad!");
-            }
-        }
+        $(document).ready(function () {
 
-
+            $("#hello").on("click", function (e) {
+                e.preventDefault();
+                $("#hello1").slideDown();
+            });
+            $("#hi").on("click", function (e) {
+                e.preventDefault();
+                $("#hi1").slideDown();
+            });
+        });
     </script>
 </body>
 

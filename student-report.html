@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student | Report</title>
+    <link rel="stylesheet" href="school-templete.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <header class="top-header">
+        <div class="header-left">
+            <div class="logo">S</div>
+            <h1 class="school-name">School Management</h1>
+        </div>
+        <div class="header-right">
+            <a href="login.html" class="logout-btn">Logout</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <ul class="nav-links">
+                <li><a href="index.html">Dashboard</a></li>
+
+                <div>
+                    <li><a class="dropdown-label" href="forms.html" id="hello">FORMS</a></li>
+                </div>
+                <div>
+                    <ul class="submenu" id="hello1">
+                        <li><a href="student-form.html">Student Form</a></li>
+                        <li><a href="teacher-form.html">Teacher Form</a></li>
+                        <li><a href="manager-form.html">Manager Form</a></li>
+                        <li><a href="finance-form.html">Finance Form</a></li>
+                        <li><a href="attendence-form.html">Attendance Form</a></li>
+                    </ul>
+                </div>
+
+                <li> <a href="reports.html" class="dropdown-label" id="hi">REPORTS</a></li>
+                <ul class="submenu" id="hi1">
+                    <li><a href="student-report.html">Student Report</a></li>
+                    <li><a href="finance-report.html">Finance Report</a></li>
+                    <li><a href="attendence-report.html">Attendance Report</a></li>
+                </ul>
+            </ul>
+        </nav>
+
+
+
+        <div class="main-content">
+            <div class="report-wrapper">
+                <div class="report-header">
+                    <div class="header-info">
+                        <h2>Student Progress Reports</h2>
+                        <p>Halkan ka eeg liiska guud ee ardayda, fasalladooda iyo xaaladda lacagta.</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn-print" onclick="window.print()">Print Report</button>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <div class="form-grid">
+                        <div class="input-field">
+                            <label>Filter by Class</label>
+                            <select id="filter-class">
+                                <option value="all">Dhamaan Fasallada</option>
+                                <option value="Grade 1">Grade 1</option>
+                                <option value="Grade 2">Grade 2</option>
+                                <option value="Grade 3">Grade 3</option>
+                                <option value="Grade 4">Grade 4</option>
+                                <option value="Grade 5">Grade 5</option>
+                                <option value="Grade 6">Grade 6</option>
+                                <option value="Grade 7">Grade 7</option>
+                                <option value="Grade 8">Grade 8</option>
+                                <option value="form 1">Form 1</option>
+                                <option value="form 2">Form 2</option>
+                                <option value="form 3">Form 3</option>
+                                <option value="form 4">Form 4</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label>Search Student</label>
+                            <input type="text" placeholder="Ku raadi magac ama ID...">
+                        </div>
+                    </div>
+                </div>
+
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Magaca Ardayga</th>
+                            <th>Fasalka</th>
+                            <th>Gender</th>
+                            <th>Lacagta & Fees</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#ST001</td>
+                            <td>Axmed Cali Maxamed</td>
+                            <td>Grade 12</td>
+                            <td>Male</td>
+                            <td><span class="badge paid">Paid</span></td>
+                            <td><span class="active-dot"></span> Active</td>
+                        </tr>
+                        <tr>
+                            <td>#ST002</td>
+                            <td>Fadumo Jaamac Faarax</td>
+                            <td>Grade 11</td>
+                            <td>Female</td>
+                            <td><span class="badge pending">Pending</span></td>
+                            <td><span class="active-dot"></span> Active</td>
+                        </tr>
+                        <tr>
+                            <td>#ST003</td>
+                            <td>Cumar Xasan Cabdi</td>
+                            <td>Grade 10</td>
+                            <td>Male</td>
+                            <td><span class="badge unpaid">Unpaid</span></td>
+                            <td><span class="inactive-dot"></span> Inactive</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#hello").on("click", function (e) {
+                e.preventDefault();
+                $("#hello1").slideDown();
+            });
+            $("#hi").on("click", function (e) {
+                e.preventDefault();
+                $("#hi1").slideDown();
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

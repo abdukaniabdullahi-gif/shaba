@@ -50,14 +50,16 @@
 
     <script>
         $(document).ready(function () {
-
+            // Dropdown-ka FORMS
             $("#hello").on("click", function (e) {
-                e.preventDefault();
-                $("#hello1").slideDown();
+                e.preventDefault(); // Ka jooji inuu bog kale aado
+                $("#hello1").slideToggle(300); // 300ms ayuu ku furmayaa/xirmayaa
             });
+
+            // Dropdown-ka REPORTS
             $("#hi").on("click", function (e) {
                 e.preventDefault();
-                $("#hi1").slideDown();
+                $("#hi1").slideToggle(300);
             });
         });
     </script>

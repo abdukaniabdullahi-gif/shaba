@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Management</title>
     <link rel="stylesheet" href="school-templete.css">
-    <script src="/jquery-4.0.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="school-java.js"></script>
 </head>
 
 <body>
@@ -124,46 +126,7 @@
             </div>
         </main>
     </div>
-    <script>
-        $(document).ready(function () {
-            // 1. Menu-ka Mobile-ka (Toggle Sidebar)
-            $("#menu-toggle").on("click", function (e) {
-                e.preventDefault();
-                $(".sidebar").toggleClass("active");
 
-                // Bedel icon-ka ☰ iyo ✕
-                if ($(".sidebar").hasClass("active")) {
-                    $(this).text("✕");
-                } else {
-                    $(this).text("☰");
-                }
-            });
-
-            // 2. Dropdown-ka FORMS (Halkan waa meesha ciladu kaa jirtay)
-            $("#hello").on("click", function (e) {
-                e.preventDefault();
-                e.stopPropagation(); // Tan ayaa muhiim ah si aanu click-ku u dhuuman
-                $("#hello1").stop().slideToggle(300); // SlideToggle ayaa ka fiican slideDown
-                $(this).find(".arrow").toggleClass("rotate-arrow"); // Haddii aad arrow isticmaashid
-            });
-
-            // 3. Dropdown-ka REPORTS
-            $("#hi").on("click", function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-                $("#hi1").stop().slideToggle(300);
-                $(this).find(".arrow").toggleClass("rotate-arrow");
-            });
-
-            // 4. Inuu menu-ku xirmo haddii meel bannaanka ah la taabto
-            $(document).on("click", function (e) {
-                if (!$(e.target).closest('.sidebar, #menu-toggle').length) {
-                    $(".sidebar").removeClass("active");
-                    $("#menu-toggle").text("☰");
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>

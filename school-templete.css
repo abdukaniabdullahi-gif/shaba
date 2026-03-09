@@ -830,47 +830,7 @@ body {
     cursor: pointer;
     margin-right: 10px;
 }
-@media screen and (max-width: 768px) {
-    /* Badhanka Menu-ka oo leh animation yar */
-    .menu-btn {
-        display: block;
-        transition: transform 0.3s ease;
-    }
-    
-    /* Marka menu-ku furan yahay badhanku ha wareego */
-    .menu-btn.open {
-        transform: rotate(90px);
-        background-color: #e74c3c; /* Midabka casaan ha isku beddelo */
-    }
 
-    /* Sidebar-ka oo leh Animation silid ah iyo madoobaan */
-    .sidebar {
-        left: -280px; /* In yar ka sii fogee */
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Animation aad u smooth ah */
-        box-shadow: none;
-    }
-
-    /* Marka uu firfircoon yahay (Active) */
-    .sidebar.active {
-        left: 5px !important;
-        opacity: 1;
-        visibility: visible;
-        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.3);
-    }
-    
-    /* In yar oo animation ah u yeel liisaska gudaha ku jira */
-    .sidebar.active .nav-links li {
-        animation: slideIn 0.4s ease forwards;
-        opacity: 0;
-    }
-
-    /* Mid mid u soo bixi liisaska (Stagger effect) */
-    .sidebar.active li:nth-child(1) { animation-delay: 0.1s; }
-    .sidebar.active li:nth-child(2) { animation-delay: 0.2s; }
-    .sidebar.active li:nth-child(3) { animation-delay: 0.3s; }
-}
 
 /* Keyframes loogu talagalay liisaska gudaha */
 @keyframes slideIn {
@@ -883,21 +843,7 @@ body {
         opacity: 1;
     }
 }
-@media screen and (max-width: 768px) {
-    .menu-btn {
-        display: block; /* Mobile-ka kaliya ka soo muuqo */
-    }
 
-    .sidebar {
-        left: -260px; /* Marka hore qari */
-        transition: all 0.3s ease;
-        z-index: 1001;
-    }
-
-    .sidebar.active {
-        left: 5px !important; /* Marka la riixo soo bixi */
-    }
-}
 
 /* --- RESPONSIVE SETTINGS (Media Queries) --- */
 
@@ -917,81 +863,6 @@ body {
     }
 }
 
-/* 2. Moobilka (Ka yar 768px) */
-@media screen and (max-width: 768px) {
-
-    /* Header-ka: Magaca dugsiga ha yaraado si uu boos u helo */
-    .school-name {
-        font-size: 16px;
-    }
-
-    .top-header {
-        padding: 0 10px;
-    }
-
-    .dashboard-grid {
-        grid-template-columns: 1fr;
-        /* Labadii dhinac istaagi jiray mid ha iska kor maraa */
-    }
-
-    /* Sidebar-ka: Moobilka waa inuu qarsamaa (Waxaana lagu furi karaa JavaScript hadhow) */
-    .sidebar {
-        left: -260px;
-        /* Wuu dhuumanayaa */
-        transition: 0.3s;
-    }
-
-    /* Main Content: Booska dhinaca (Margin) waa in laga saaraa */
-    .main-content {
-        margin-left: 0 !important;
-        padding: 15px;
-        margin-top: 80px;
-    }
-
-    /* Forms: Grid-ka labada ahaa hal ka dhig (Vertical) */
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .full-width {
-        grid-column: span 1;
-    }
-
-    /* Dashboard Stats: Hal-hal ha u istaagaan */
-    .modern-stats {
-        grid-template-columns: 1fr;
-    }
-
-    .finance-summary,
-    .attendance-summary {
-        grid-template-columns: 1fr;
-    }
-
-    /* Cards: Ha kala fogaadeen */
-    .stat-card {
-        width: 100%;
-    }
-
-    /* Tables: Haddii miisku weynaado, ha yeesho scroll-ka dhinaca */
-    .report-wrapper {
-        overflow-x: auto;
-    }
-
-    .styled-table {
-        min-width: 600px;
-        /* Inuu scroll yeesho si aanu qoraalku isugu dhex yaacin */
-    }
-
-    /* Buttons: Moobilka ha iska kor maraan */
-    .form-actions {
-        flex-direction: column;
-    }
-
-    .btn-save,
-    .btn-clear {
-        width: 100%;
-    }
-}
 
 /* 3. Moobilada aadka u yar (Ka yar 480px) */
 @media screen and (max-width: 480px) {
@@ -1010,92 +881,134 @@ body {
         font-size: 20px;
     }
 }
+
+
+/* --- XALKA MOBILE-KA (768px iyo ka yar) --- */
 @media screen and (max-width: 768px) {
+    
+    /* 1. Sidebar-ka ka dhig mid wax kasta ka sareeya */
     .sidebar {
-        position: fixed;
-        top: 70px; /* Header-ka hoostiisa */
-        left: -280px; 
-        width: 260px;
-        height: 100vh; /* Screen-ka oo dhan hoos ha u aado */
-        background-color: #2c3e50;
-        z-index: 9999; /* Inuu ka sareeyo wax kasta */
-        overflow-y: auto; /* Haddii links-ku bataan in la scroll-gareyn karo */
-        transition: all 0.3s ease;
-        display: block !important; /* Hubi inaanu qarsanayn */
-    }
-
-    .sidebar.active {
-        left: 0 !important;
-    }
-
-    /* Submenu-ga booska uu qaadanayo */
-    .submenu {
-        display: none; /* Markii hore ha qarsanaado */
-        background-color: #34495e; /* Midab yar oo ka duwan sidebar-ka */
-        padding-left: 0;
-        width: 100%;
-    }
-
-}
-
-@media screen and (max-width: 768px) {
-    .sidebar {
-        position: fixed; /* Inuu korka sabbeeyo */
-        top: 0;
-        left: -100%; /* Bilowga ha dhuunto */
-        width: 280px;
-        height: 100vh; /* Screen-ka oo dhan hoos ha u aado */
-        background-color: #2c3e50;
-        z-index: 10000; /* Inuu wax kasta ka sareeyo */
-        transition: 0.4s ease;
-        padding-top: 80px; /* Si aanu u qarin header-ka */
-        display: block !important;
-        overflow-y: auto; /* Haddii submenu-ga uu dheeraado in la scroll-gareyn karo */
-    }
-
-    .sidebar.active {
-        left: 0 !important; /* Marka badhanka la riixo halkan ha yimaado */
-    }
-
-    /* Submenu-ga mobile-ka ha yeesho midab ka duwan si loo garto */
-    .submenu {
-        background-color: #34495e; 
-        display: none; /* Markii hore ha qarsanaado */
-        padding-left: 0;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    /* Sidebar-ka ka dhig mid screen-ka dhan dhererkiisa le'eg */
-    .sidebar {
-        position: fixed !important; /* Inuu korka sabbeeyo */
+        position: fixed !important;
         top: 0 !important;
         left: -100% !important; /* Markii hore ha dhuunto */
         width: 280px !important;
-        height: 100vh !important; /* Screen-ka oo dhan (Full Height) */
+        height: 100vh !important; /* Screen-ka oo dhan hoos ha u aado */
         background-color: #2c3e50 !important;
-        z-index: 99999 !important; /* Inuu wax kasta ka sareeyo */
+        z-index: 999999 !important; /* Lambar aad u weyn si click-ku u qabto */
         padding-top: 80px !important; 
-        transition: 0.4s ease-in-out;
-        overflow-y: auto !important; /* Haddii links-ku bataan in la scroll-gareeyo */
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow-y: auto !important; /* Si hoos loogu scroll-gareeyo haddii submenu-gu dheeraado */
         display: block !important;
+        box-shadow: none;
     }
 
-    /* Marka la riixo menu-ka */
+    /* 2. Marka Sidebar-ku furan yahay */
     .sidebar.active {
         left: 0 !important;
-        box-shadow: 10px 0 50px rgba(0,0,0,0.5);
+        box-shadow: 10px 0 50px rgba(0, 0, 0, 0.5);
     }
 
-    /* Links-ka hoose (Submenu) hubi inay muuqdaan */
+    /* 3. Submenu-ga (FORMS & REPORTS) */
     .submenu {
-        display: none; 
-        background-color: #1a252f; /* Midab madow oo ka duwan sidebar-ka */
-        padding-left: 0 !important;
-        width: 100%;
+        display: none; /* JavaScript ayaa furi doona */
+        background-color: #1a252f !important; /* Midab madow oo ka duwan sidebar-ka */
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border-left: 4px solid #1abc9c; /* Xariiq yar oo qurux ah */
     }
-    
+
     .submenu li a {
         padding-left: 50px !important; /* In yar gudaha u riix links-ka hoose */
+        font-size: 14px !important;
+        background-color: transparent !important;
+    }
+
+    /* 4. Main Content-ka ha isku dhex yaacin */
+    .main-content {
+        margin-left: 0 !important; /* Ka saar margin-ka laptop-ka */
+        width: 100% !important;
+        padding: 15px !important;
+        margin-top: 80px !important;
+    }
+
+    /* 5. Header-ka iyo Badhanka Menu-ka */
+    .menu-btn {
+        display: block !important; /* Hubi inuu muuqdo moobilka */
+        z-index: 1000000 !important; /* Inuu sidebar-ka ka sareeyo */
     }
 }
+
+/* --- HABAYNTA FOOMAMKA MOBILE-KA --- */
+@media screen and (max-width: 600px) {
+    /* 1. Foomka weelkiisa (Wrapper) */
+    .form-wrapper {
+        padding: 15px !important;
+        margin: 10px !important;
+        width: calc(100% - 20px) !important; /* Inuu screen-ka ku dhex jiro */
+        box-sizing: border-box;
+    }
+
+    /* 2. Grid-ka foomka ka dhig hal column oo kaliya */
+    .form-grid {
+        display: block !important; /* Grid-ka ka saar si ay isku dul fuulaan */
+    }
+
+    /* 3. Dhammaan input-yada ka dhig 100% ballacooda */
+    .input-field {
+        width: 100% !important;
+        margin-bottom: 15px;
+    }
+
+    .input-field input, 
+    .input-field select, 
+    .input-field textarea {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box; /* Tan ayaa ka hortagaysa inuu xadka dhaafo */
+        font-size: 16px !important; /* Waxay ka hortagtaa zoom-ka iPhone-ka */
+    }
+
+    /* 4. Badhamada (Save/Clear) ka dhig kuwo ballaran oo is dul saaran */
+    .form-actions {
+        display: flex;
+        flex-direction: column; /* Is dul saar */
+        gap: 10px;
+        width: 100%;
+    }
+
+    .btn-save, .btn-clear {
+        width: 100% !important;
+        padding: 15px !important;
+    }
+     /* Ka dhig kaararka dhaqaalaha mid-mid is dul saaran */
+    .finance-summary, .attendance-summary {
+        grid-template-columns: 1fr !important; /* Hal column kaliya */
+        gap: 10px;
+        width: 100% !important;
+    }
+
+    .f-card, .att-card {
+        width: 100% !important;
+        padding: 15px !important;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    /* Ku xir miiska weel u oggolaanaya in la scroll-gareeyo */
+    .report-wrapper {
+        overflow-x: auto !important; /* Tan ayaa scroll-ka u oggolaanaysa */
+        padding: 10px !important;
+    }
+
+    .styled-table {
+        min-width: 600px; /* Waxay ilaalinaysaa in qoraalku isku dhex yaaco */
+        font-size: 12px !important; /* Qoraalka yareey si wax badan u muuqdaan */
+    }
+
+    .styled-table th, .styled-table td {
+        padding: 8px 5px !important;
+    }
+}
+

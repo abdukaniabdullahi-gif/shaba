@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaba P&S | School Management</title>
+    <title>School Management</title>
     <link rel="stylesheet" href="school-templete.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/jquery-4.0.0.min.js"></script>
 </head>
 
 <body>
@@ -125,29 +125,29 @@
         </main>
     </div>
     <script>
-   $(document).ready(function () {
-    // Toggle Sidebar iyo Badhanka calaamaddiisa
-    $("#menu-toggle").on("click", function () {
-        $(".sidebar").toggleClass("active");
-        $(this).toggleClass("open"); // Ku dar class-ka "open"
+        $(document).ready(function () {
+            // Toggle Sidebar iyo Badhanka calaamaddiisa
+            $("#menu-toggle").on("click", function () {
+                $(".sidebar").toggleClass("active");
+                $(this).toggleClass("open"); // Ku dar class-ka "open"
 
-        // Bedel calaamadda ☰ iyo X
-        if ($(this).hasClass("open")) {
-            $(this).text("✕");
-        } else {
-            $(this).text("☰");
-        }
-    });
+                // Bedel calaamadda ☰ iyo X
+                if ($(this).hasClass("open")) {
+                    $(this).text("✕");
+                } else {
+                    $(this).text("☰");
+                }
+            });
 
-    // Markaad meel bannaanka ah taabato ha xirmo
-    $(document).on("click", function (e) {
-        if (!$(e.target).closest('.sidebar, #menu-toggle').length) {
-            $(".sidebar").removeClass("active");
-            $("#menu-toggle").removeClass("open").text("☰");
-        }
-    });
-});
-</script>
+            // Markaad meel bannaanka ah taabato ha xirmo
+            $(document).on("click", function (e) {
+                if (!$(e.target).closest('.sidebar, #menu-toggle').length) {
+                    $(".sidebar").removeClass("active");
+                    $("#menu-toggle").removeClass("open").text("☰");
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -1064,3 +1064,38 @@ body {
         padding-left: 0;
     }
 }
+
+@media screen and (max-width: 768px) {
+    /* Sidebar-ka ka dhig mid screen-ka dhan dhererkiisa le'eg */
+    .sidebar {
+        position: fixed !important; /* Inuu korka sabbeeyo */
+        top: 0 !important;
+        left: -100% !important; /* Markii hore ha dhuunto */
+        width: 280px !important;
+        height: 100vh !important; /* Screen-ka oo dhan (Full Height) */
+        background-color: #2c3e50 !important;
+        z-index: 99999 !important; /* Inuu wax kasta ka sareeyo */
+        padding-top: 80px !important; 
+        transition: 0.4s ease-in-out;
+        overflow-y: auto !important; /* Haddii links-ku bataan in la scroll-gareeyo */
+        display: block !important;
+    }
+
+    /* Marka la riixo menu-ka */
+    .sidebar.active {
+        left: 0 !important;
+        box-shadow: 10px 0 50px rgba(0,0,0,0.5);
+    }
+
+    /* Links-ka hoose (Submenu) hubi inay muuqdaan */
+    .submenu {
+        display: none; 
+        background-color: #1a252f; /* Midab madow oo ka duwan sidebar-ka */
+        padding-left: 0 !important;
+        width: 100%;
+    }
+    
+    .submenu li a {
+        padding-left: 50px !important; /* In yar gudaha u riix links-ka hoose */
+    }
+}

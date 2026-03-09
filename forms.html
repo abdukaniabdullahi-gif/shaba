@@ -51,18 +51,41 @@
 
     <script>
         $(document).ready(function () {
-            // Hubi in click-ku shaqaynayo
-            $("#hello").on("click", function (e) {
+            // 1. Menu-ka Mobile-ka (Toggle Sidebar)
+            $("#menu-toggle").on("click", function (e) {
                 e.preventDefault();
-                e.stopPropagation(); // Jooji in click-ku u gudbo meelo kale
-                $("#hello1").stop().slideToggle(400); // .stop() wuxuu joojiyaa animation-ada is dul fuulay
-                console.log("Forms clicked!"); // Tani waxay kuu muujinaysaa inuu shaqaynayo
+                $(".sidebar").toggleClass("active");
+
+                // Bedel icon-ka ☰ iyo ✕
+                if ($(".sidebar").hasClass("active")) {
+                    $(this).text("✕");
+                } else {
+                    $(this).text("☰");
+                }
             });
 
+            // 2. Dropdown-ka FORMS (Halkan waa meesha ciladu kaa jirtay)
+            $("#hello").on("click", function (e) {
+                e.preventDefault();
+                e.stopPropagation(); // Tan ayaa muhiim ah si aanu click-ku u dhuuman
+                $("#hello1").stop().slideToggle(300); // SlideToggle ayaa ka fiican slideDown
+                $(this).find(".arrow").toggleClass("rotate-arrow"); // Haddii aad arrow isticmaashid
+            });
+
+            // 3. Dropdown-ka REPORTS
             $("#hi").on("click", function (e) {
                 e.preventDefault();
                 e.stopPropagation();
-                $("#hi1").stop().slideToggle(400);
+                $("#hi1").stop().slideToggle(300);
+                $(this).find(".arrow").toggleClass("rotate-arrow");
+            });
+
+            // 4. Inuu menu-ku xirmo haddii meel bannaanka ah la taabto
+            $(document).on("click", function (e) {
+                if (!$(e.target).closest('.sidebar, #menu-toggle').length) {
+                    $(".sidebar").removeClass("active");
+                    $("#menu-toggle").text("☰");
+                }
             });
         });
     </script>
